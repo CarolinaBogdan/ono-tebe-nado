@@ -160,8 +160,8 @@
 .card {
     background-color: antiquewhite;
     display: flex;
-    justify-content: space-between; 
     flex-direction: column;
+    justify-content: space-between;
     background-size: cover;
     background-position: center;
     width: 100%;
