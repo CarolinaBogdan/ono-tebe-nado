@@ -49,9 +49,8 @@
 }
 
 .cover {
-    background-color: rgb(0 0 0 / 0.5);
-    width: 1100px;
-    height: 757px;
+    background-color: rgb(0 0 0 / 0.6);
+    width: 100%;
     background-image: url(../images/cover.jpg);
     background-size: cover;
     background-position: center center;
@@ -63,14 +62,13 @@
     height: 100%;
     background-color: rgb(0 0 0 / 0.6);
     position: absolute;
+    inset: 0; 
 }
 
 .cover__title {
-    position: absolute;
-    right: 50px;
-    left: 50px;
-    top: 165px;
-    width: 1000px;
+    padding-left: 50px;
+    padding-top: 165px;
+    padding-right: 50px;
     color: white;
     font-size: 100px;
     font-weight: 700;
@@ -79,6 +77,7 @@
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .aligned-text_center {
@@ -97,10 +96,18 @@
     letter-spacing: 0.6em;
 }
 
+.cover__description {
+    padding-left: 78px;
+    padding-top: 130px;
+    padding-right: 50px;
+    padding-bottom: 51px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
 .cover__description-text {
-    position: absolute;
-    bottom: 64px;
-    left: 78px;
     color: white;
     font-size: 22px;
     text-transform: uppercase;
@@ -109,9 +116,6 @@
 }
 
 .bet-button {
-    position: absolute;
-    right: 50px;
-    bottom: 51px;
     font-size: 22px;
     text-transform: uppercase;
     font-weight: 500;
@@ -124,11 +128,9 @@
 
 
 .lots {
-    width: 1052px;
-    height: 692px;
+    padding-left: 24px;
+    padding-right: 24px;
     margin-top: 177px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .lots__heading {
@@ -144,49 +146,38 @@
     width: 334px;
     height: 563px;
     position: relative;
+    flex-grow: 1;
 }
 
 .lots__card-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     list-style: none;
-    flex-wrap: wrap;
     margin-bottom: 30px;
+    gap: 25px;
 }
 
 .card {
     background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 
 }
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
-
-.card__overlay {
-    width: 334px;
-    height: 563px;
-    background-color: rgb(0 0 0 / 0.6);
-    position: absolute;
 }
 
 .card__title {
@@ -196,10 +187,10 @@
     text-transform: uppercase;
     text-decoration: underline;
     color: #fff;
-    position: absolute;
-    left: 40px;
-    right: 40px;
-    top: 51px;
+    position: relative;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 51px;
 }
 
 .card__text {
@@ -207,17 +198,17 @@
     font-size: 20px;
     line-height: 120%;
     color: #fff;
-    position: absolute;
-    left: 40px;
-    right: 40px;
-    bottom: 48px;
+    position: relative;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 48px;
 }
 
 .lots__look-more-link {
     font-weight: 400;
     font-size: 20px;
     color: #000;
-    padding-left: 40px;
+    margin-left: 40px;
 }
 
 .about {
@@ -225,8 +216,6 @@
     margin-left: 24px;
     margin-right: 24px;
     margin-bottom: 180px;
-    width: 1052px;
-    height: 595px;
     display: grid;
     gap: 24px;
     grid-template-columns: 334px 1fr;
@@ -235,7 +224,6 @@
 .about__column {
     display: flex;
     flex-direction: column;
-    gap: 24px;
 }
 
 .about__logo {
@@ -262,7 +250,7 @@
     text-transform: uppercase;
     color: #000;
     margin-top: 136px;
-    margin-bottom: 76px;
+    margin-bottom: 100px;
 }
 
 .about__text {
@@ -271,15 +259,21 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .footer {
-    width: 1000px;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 80px;
     display: flex;
     justify-content: space-between;
+}
+
+.footer__menu {
+    padding-right: 20px;
 }
 
 .footer__menu-link {
